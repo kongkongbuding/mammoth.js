@@ -31,8 +31,10 @@
     "browserify-prepend-licenses": "~1.0.0",
     "duck": "~0.1.11",
     "eslint": "2.13.1",
+    "express": "^4.16.4",
     "hamjest": "2.13.0",
     "mocha": "~2.2.5",
+    "nodemon": "^1.19.1",
     "temp": "~0.7.0",
     "uglify-js": "~2.4.8"
   },
@@ -44,9 +46,9 @@
     "mammoth": "bin/mammoth"
   },
   "scripts": {
+    "dev": "nodemon ./lib/node.js",
     "pretest": "eslint lib test",
-    "test": "mocha 'test/**/*.tests.js'",
-    "prepublish": "make mammoth.browser.min.js"
+    "test": "mocha 'test/**/*.tests.js'"
   },
   "license": "BSD-2-Clause"
 }
